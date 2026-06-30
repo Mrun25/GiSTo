@@ -1,0 +1,120 @@
+/*
+  GiSTo CA Dashboard — design tokens.
+
+  Concept: a working ledger for a CA triaging risk across many clients,
+  not a marketing dashboard. Paper-toned background instead of stark
+  white (calmer for long sessions); a single accent color reserved
+  exclusively for non-zero rupee risk, so the eye learns to scan straight
+  down the risk column. Serif for client/business names (gives the table
+  the gravity of a financial register); grotesque for UI chrome; tabular
+  mono-leaning numerals for all rupee figures so columns of numbers
+  align visually.
+*/
+
+:root {
+  /* --- Color --- */
+  --ink-900: #15233b;       /* primary text, nav, headers */
+  --ink-700: #2c3e58;
+  --ink-500: #5b6b82;
+  --paper-0: #faf8f4;        /* page background */
+  --paper-50: #f3f0e9;       /* card/table background */
+  --paper-100: #e9e4d8;      /* hairline borders */
+  --line: #ded7c7;
+
+  --risk-600: #c44536;       /* accent — ITC at risk, reserved exclusively for this */
+  --risk-100: #f6e3df;
+  --risk-700: #a1392c;
+
+  --safe-600: #3d6b66;       /* verified / on-track */
+  --safe-100: #e1ebe9;
+
+  --warn-600: #a9762b;       /* late-but-filed, partial risk */
+  --warn-100: #f3e8d6;
+
+  --white: #ffffff;
+
+  /* --- Type --- */
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+
+  /* --- Spacing scale --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* --- Radius / shadow: deliberately minimal --- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --shadow-card: 0 1px 2px rgba(21, 35, 59, 0.06), 0 1px 1px rgba(21, 35, 59, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper-0);
+  color: var(--ink-900);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* Tabular numerals for every rupee figure across the app */
+.num {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1;
+  letter-spacing: -0.01em;
+}
+
+.num-risk {
+  color: var(--risk-700);
+  font-weight: 600;
+}
+
+.num-safe {
+  color: var(--safe-600);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Portfolio table row hover — can't be expressed via inline styles */
+.portfolio-table tbody tr {
+  transition: background-color 120ms ease;
+}
+.portfolio-table tbody tr:hover {
+  background-color: var(--paper-50);
+}
+
+input[type='checkbox'] {
+  accent-color: var(--ink-900);
+}
+
