@@ -1,11 +1,26 @@
-# GiSTo — full build (all phases)
+<p align="center">
+  <img src="gisto-logo.svg" alt="GiSTo Banner" width="100%">
+</p>
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Python](https://img.shields.io/badge/python-3.11+-blue)
-![React](https://img.shields.io/badge/react-18-blue)
+<h1 align="center">GiSTo 🧾</h1>
 
-*Never lose tax credit to a supplier who didn't file.*
+<p align="center">
+  <a href="docs/ARCHITECTURE.md">System Architecture</a> |
+  <a href="docs/DATA_MODEL.md">Data Model</a> |
+  <a href="https://gisto.vercel.app">Live CA Dashboard</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
+  <img src="https://img.shields.io/badge/python-3.11+-blue" alt="Python">
+  <img src="https://img.shields.io/badge/react-18-blue" alt="React">
+</p>
+
+<h3 align="center">
+  <em>Never lose tax credit to a supplier who didn't file.</em>
+</h3>
+
 
 This is a runnable implementation of the GiSTo PRD: a Telegram bot
 (Phase 1), a CA web dashboard (Phase 2), the Phase 3 risk-scoring layer,
