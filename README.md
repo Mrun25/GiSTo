@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="gisto-logo.svg" alt="GiSTo Banner" width="100%">
+  <img src="gisto-logo.svg" alt="GiSTo Banner" width="400">
 </p>
 
 <h1 align="center">GiSTo 🧾</h1>
